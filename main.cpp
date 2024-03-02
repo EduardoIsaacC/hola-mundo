@@ -1,11 +1,15 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 #include <Alimento.hpp>
 #include <Mascota.hpp>
-
+#include <Dibujo.hpp>
 int main(int argc, char const *argv[])
 {
+    Dibujo dibujo("./assets/donperro.txt");
+    dibujo.Dibujar();
+
     /* code */
     Mascota m1;
     Mascota m2;

@@ -4,8 +4,20 @@ class Mascota {
     - salud: int  
     + Comer() 
 }
-class Alimento
-class Salud
+class Alimento{
+    -olor: int
+    -sabor: int 
+    -color: Color 
+    -textura: int 
+    -forma: int
+    -apariencia: int 
+    +Alimentar()
+    +Podrirse()
+}
+class Salud{
+    -energia 
+    
+}
 class Nombre 
 class Hueso
 package Juguetes{
