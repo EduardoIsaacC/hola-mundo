@@ -1,0 +1,57 @@
+@startuml mascota
+
+class Mascota {
+    - salud: int  
+    + Comer() 
+}
+class Alimento
+class Salud
+class Nombre 
+class Hueso
+package Juguetes{
+class Pelota{
+    - posicion: Vector2d
+    -color: color
+    + Rebotar()
+}
+}
+class color {
+    -rojo: int
+    -verde: int
+    -azul: int
+}
+class Dueño
+class Energia
+class Correa
+class Vacunas
+class Casa
+class Placa
+class Agua
+class cabello
+Mascota "*" *-- "1" Nombre
+Mascota "1" *-- "*" Dueño
+Dueño "1" *-- "1" Nombre
+Mascota "1" *-- "*" Hueso
+Mascota "1" o-- "*" Energia
+Energia "*" o-- "*" Alimento
+Mascota "1" o-- "1" Pelota
+Mascota "1" *-- "*" Salud
+Dueño "1" *-- "*" Salud
+Dueño "1" o-- "*" Energia
+Alimento  <|--  Salud
+Mascota "1" o-- "1" Correa
+Salud  <|--  Vacunas
+Casa "1" *-- "1" Nombre
+Mascota "1" o-- "1" Casa
+Dueño "1" *-- "1..*"Casa
+Dueño "1" o-- "1" Casa
+Placa "1" *-- "1" Nombre
+Correa "1" *-- "1" Placa
+Mascota "1" o-- "*" Agua
+Dueño "1" o-- "*" Agua
+Agua  <|--  Energia
+Agua  <|--  Salud
+Alimento  <|--  Energia
+Mascota "1" o-- "1" Alimento
+Pelota "1" *-- "1..*"Color
+@enduml
