@@ -10,7 +10,6 @@ class Dibujo{
     public:
     Dibujo(string path){
         file.open("./assets/donperro.txt");
-        
     }
     ~Dibujo(){
         file.close();
